@@ -1,0 +1,55 @@
+﻿@model List<ABCSUPERMAKER_CLOUD_TASK2.Models.Product>
+
+@{
+    ViewBag.Title = "Get";
+}
+
+<br />
+<br />
+<div>
+    <a href="@Url.Action("Index", "Product")">Add new Product</a>
+</div>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product Picture</th>
+                <th>Product Description</th>
+                <th>Product Name</th>
+                <th>Product Price (R)</th>
+                <th>Manage</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ABCSUPERMAKER_CLOUD_TASK2.Models.Product ProductObj in Model)
+            {
+                <tr>
+                    <td>
+                        <img class="profilePicture" src="@ProductObj.FilePath"
+                             alt="@ProductObj.FilePath" />
+                    </td>
+                    <td>@ProductObj.productDescription</td>
+                    <td>@ProductObj.productName</td>
+                    <td>@ProductObj.productPrice</td>
+                    <td>
+                        <span>
+                            @Html.ActionLink("Edit", "Index", "Product", new
+                            {
+                                id =
+                 ProductObj.RowKey
+                            }, new { })
+                        </span>
+                        <span>
+                            @Html.ActionLink("Delete", "Delete", "Product", new
+                            {
+                                id =
+                 ProductObj.RowKey
+                            }, new { })
+                        </span>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

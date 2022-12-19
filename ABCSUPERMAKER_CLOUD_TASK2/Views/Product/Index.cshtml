@@ -1,0 +1,54 @@
+﻿@model ABCSUPERMAKER_CLOUD_TASK2.Models.Product
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+<br />
+<div>
+    <a href="@Url.Action("Get", "Product")">Product Details</a>
+</div>
+<div>
+    @using (Html.BeginForm("Index", "Product", new { id = Model.RowKey },
+   FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <fieldset>
+            <legend>Product</legend>
+            
+            <ol>
+                <li style="padding-left:1em">
+                    <p style="font-family:georgia,garamond,serif;fontsize:16px;font-style:normal">
+                        <label>Product Description</label>
+                    </p>
+                    <input type="text" name="productDescription" required="required"
+                           value="@Model.productDescription" />
+                </li>
+                <li style="padding-left:1em">
+                    <p style="font-family:georgia,garamond,serif;fontsize:16px;font-style:normal;">
+                        <label>Product Name</label>
+                    </p>
+                    <input type="text" name="productName" required="required"
+                           value="@Model.productName" />
+                </li>
+                <li style="padding-left:1em">
+                    <p style="font-family:georgia,garamond,serif;fontsize:16px;font-style:normal;">
+                        <label>Product Price (R)</label>
+                    </p>
+                    <input type="text" name="productPrice" required="required"
+                           value="@Model.productPrice" />
+                </li>
+                <li style=" padding-left: 1em">
+                    <p style="font-family:georgia,garamond,serif;fontsize:16px;font-style:italic;">
+                        <label>Product Picture</label>
+                    </p>
+                    <input type="file" name="uploadFile" />
+                </li>
+            </ol>
+                <input type="submit" value="Submit" />
+
+        </fieldset>
+    }
+</div>
+
+

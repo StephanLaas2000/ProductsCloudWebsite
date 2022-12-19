@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ABC SUPERMARKET</h1>
+    <p>This application is the backend module for ABC supermarket, the purpose of this application is to perform basic CRUD operations on products that are located in the store</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Add Product", "Index", "Product")</h2>
+        <p>This purpose of the add product function is to add a desired product and store it in the storage account</p>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("View Product", "Get", "Product")</h2>
+        <p>The purpose of this button is to collect the data from the blob and display it in a view</p>
+    </div>
+</div>
