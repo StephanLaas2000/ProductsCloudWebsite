@@ -22,7 +22,7 @@ namespace ABCSUPERMAKER_CLOUD_TASK2.BlobHandler
             {
                 //get azure storage connectiono string
                 string ConnectionString =
-               "DefaultEndpointsProtocol=https;AccountName=sa20102823;AccountKey=Mq5257ahdC6qd/2JfLIiSVNLsh7fVar8dCRjK+xpMuqh8TH9CrA2wsvxbnsET5+Cg99oGHESXuKx9608uEl/Mg==;EndpointSuffix=core.windows.net";
+               "connstring"
                 CloudStorageAccount storageAccount =
                 CloudStorageAccount.Parse(ConnectionString);
                 CloudBlobClient cloudBlobClient =
