@@ -38,7 +38,7 @@ namespace ABCSUPERMAKER_CLOUD_TASK2.TableHandler
                 throw ExceptionObj;
             }
         }
-        // Retrieve Car(s) (Get > List)
+        // Retrieve Product(s) (Get > List)
         public List<T> RetrieveEntity<T>(String Query = null) where T : TableEntity,
         new()
         {
@@ -60,7 +60,7 @@ namespace ABCSUPERMAKER_CLOUD_TASK2.TableHandler
                 throw ExceptionObj;
             }
         }
-        //Insert Car
+        //Insert Product
         public void InsertEntity<T>(T entity, bool forInsert = true) where T :
         TableEntity, new()
         {
@@ -83,7 +83,7 @@ namespace ABCSUPERMAKER_CLOUD_TASK2.TableHandler
                 throw ExceptionObj;
             }
         }
-        //Delete Car
+        //Delete Product
         public bool DeleteEntity<T>(T entity) where T : TableEntity, new()
         {
             try
